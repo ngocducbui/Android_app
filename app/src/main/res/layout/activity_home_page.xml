@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    tools:context=".Services.HomePageActivity">
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical">
+               <androidx.appcompat.widget.Toolbar
+                   android:id="@+id/toolbar"
+                   android:layout_width="match_parent"
+                   android:layout_height="?attr/actionBarSize"
+                   android:background="#31A5DA">
+                   <EditText
+                       android:id="@+id/searchEditText"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:hint="Nhập từ khóa tìm kiếm"
+                       android:background="@drawable/bg_white_border_gray"
+                       android:inputType="text"
+                       android:imeOptions="actionSearch"
+
+                       android:padding="8dp"
+
+                       android:textColorHint="@android:color/darker_gray" />
+
+               </androidx.appcompat.widget.Toolbar>
+               <LinearLayout
+                   android:id="@+id/searchLayout"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_margin="8dp">
+
+
+                   <!-- RecyclerView để hiển thị danh sách sản phẩm -->
+               </LinearLayout>
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_below="@id/searchLayout">
+                   <androidx.recyclerview.widget.RecyclerView
+                       android:id="@+id/recyclerViewHomePageProducts"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                       />
+
+                   <com.google.android.material.floatingactionbutton.FloatingActionButton
+                       android:id="@+id/btnSocialN"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       android:layout_marginEnd="12dp"
+                       android:layout_marginBottom="12dp"
+                       />
+               </androidx.constraintlayout.widget.ConstraintLayout>
+           </LinearLayout>
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true">
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Services.RegisterActivity"
+    android:padding="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/back_click"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:src="@drawable/baseline_arrow_back_ios_new_24" />
+            <TextView
+                android:id="@+id/register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:height="50dp"
+                android:gravity="center"
+                android:text="REGISTER"
+                android:textColor="#004d00"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/fullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/register"
+                android:layout_marginTop="20dp"
+                android:height="60dp"
+                android:background="#30ffffff"
+                android:drawableLeft="@drawable/baseline_drive_file_rename_outline_24"
+                android:drawablePadding="20dp"
+                android:hint="Full Name"
+                android:padding="20dp"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+
+            <EditText
+                android:id="@+id/gmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fullname"
+                android:layout_marginTop="20dp"
+                android:height="60dp"
+                android:background="#30ffffff"
+                android:drawableLeft="@drawable/baseline_mail_24"
+                android:drawablePadding="20dp"
+                android:hint="Gmail"
+                android:padding="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gmail"
+                android:layout_marginTop="20dp"
+                android:height="60dp"
+                android:background="#30ffffff"
+                android:drawableLeft="@drawable/baseline_phone_android_24"
+                android:drawablePadding="20dp"
+                android:hint="Phone"
+                android:inputType="number"
+                android:padding="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phone"
+                android:layout_marginTop="20dp"
+                android:height="60dp"
+                android:background="#30ffffff"
+                android:drawableLeft="@drawable/baseline_location_city_24"
+                android:drawablePadding="20dp"
+                android:hint="Address"
+                android:padding="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+
+            <TextView
+                android:id="@+id/dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/address"
+                android:layout_marginTop="20dp"
+                android:height="60dp"
+                android:background="#30ffffff"
+                android:drawableLeft="@drawable/baseline_calendar_month_24"
+                android:drawablePadding="20dp"
+                android:hint="Date of Birth"
+                android:padding="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:id="@+id/gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dob"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="Male"
+                    android:textSize="18dp"
+                    android:checked="true"
+                    android:onClick="checkradiobutton"/>
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:text="Female"
+                    android:textSize="18dp"
+                    android:onClick="checkradiobutton"/>
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gender"
+                android:layout_marginTop="20dp"
+                android:height="60dp"
+                android:background="#30ffffff"
+                android:drawableLeft="@drawable/baseline_person_24"
+                android:drawablePadding="20dp"
+                android:hint="Username"
+                android:padding="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/username"
+                android:layout_marginTop="20dp"
+                android:height="60dp"
+                android:background="#30ffffff"
+                android:drawableLeft="@drawable/baseline_security_24"
+                android:drawablePadding="20dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="19dp" />
+
+            <EditText
+                android:id="@+id/repassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/password"
+                android:layout_marginTop="20dp"
+                android:height="60dp"
+                android:background="#30ffffff"
+                android:drawableLeft="@drawable/baseline_security_24"
+                android:drawablePadding="20dp"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:padding="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/image"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/repassword"
+                android:layout_marginTop="20dp"
+                android:height="60dp"
+                android:background="#30ffffff"
+                android:drawableLeft="@drawable/baseline_image_24"
+                android:drawablePadding="20dp"
+                android:hint="Avatar "
+                android:padding="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="18dp" />
+            <Button
+                android:id="@+id/choose_file"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/repassword"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/image"
+                android:background="#225c6e"
+                android:text="Choose"
+                android:textSize="15dp" />
+            <CheckBox
+                android:id="@+id/check_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:scaleX="1.5"
+                android:scaleY="1.5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@+id/check_box"
+                android:text="I agree to the terms and conditions"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+
+            <Button
+                android:id="@+id/register_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/check_box"
+                android:text="Register"
+                android:gravity="center"
+                android:background="#2b2b2b"
+                android:layout_margin="20dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="24dp" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

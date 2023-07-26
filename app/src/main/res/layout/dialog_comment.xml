@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="500dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <LinearLayout
+                android:id="@+id/layoutTextComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:padding="4dp"
+                >
+                <EditText
+                    android:id="@+id/txtComment"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Comment"/>
+                <ImageButton
+                    android:id="@+id/btnComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/baseline_send_24"
+                    android:layout_marginStart="4dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="4dp"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:transitionGroup="true"
+                app:layout_constraintTop_toBottomOf="@id/layoutTextComment"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

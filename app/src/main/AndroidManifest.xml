@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PRM_Final"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".Services.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.CustomerSupportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.InviteFriendActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.AboutUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.StatisticActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.ListNotApproveProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.AdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.UpdateUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.AddUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.LienHeDatHangActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.ListUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.UpdateProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.ListCommentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.DetailProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.ListProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.HomePageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.AddProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.ChangePassSuccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.ChangePassInForgotActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Services.OtpVerifyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.ForgetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.SecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Services.PolicyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Services.InsertOrUpdateSocical"
+            android:exported="false" />
+        <activity
+            android:name=".Services.SocicalActivity"
+            android:exported="false"></activity>
+    </application>
+
+</manifest>
