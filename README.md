@@ -1,13 +1,4 @@
 # PRM 392- Android
-# Group 1
-
-## Members
-    1. Nguyen Huy Hoang (HE160531)
-    2. Bui Nguyen Ngoc Duc (HE150352)
-    3. Pham Hai Binh (HE160537)
-    4. Ha Viet Chien (HE163678)
-    5. Nguyen Tuan Tu (HE150687)
-
 ## Language
     Java
     SQL
